@@ -1,0 +1,21 @@
+<html>
+<body>  
+  <p>Selected repository: 
+    <a id="remote">
+      url
+    <a>
+  </p><br/>
+
+  <p><a id="results">View results</a></p><br/>
+
+  <p><a id="back">Go back</a></p>
+  
+  <script>
+    let url = "{{ remote_repo }}/{{ user }}/{{ repo }}";
+    document.getElementById("results").setAttribute("href", "{{ console_output }}");
+    document.getElementById("back").setAttribute("href", "{{ homepage }}");
+    document.getElementById("remote").setAttribute("href", url);
+    document.getElementById("remote").innerHTML = url;
+   </script>
+</body>
+</html>

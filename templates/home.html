@@ -1,0 +1,18 @@
+<html>
+<body>
+  <h1>Submissions</h1>
+  <form id="submission" onSubmit="setRepo()">
+    <p>Username: </p><input type="text" id="user">
+    <p>Repository name: </p><input type="text" id="repo"><br/><br/>
+    <input type="submit">
+  </form>
+  <script> 
+    function setRepo() {
+      let user = document.getElementById("user").value;
+      let repo = document.getElementById("repo").value;
+      let url = `/${user}/${repo}`;    
+      document.getElementById("submission").setAttribute("action", url);
+    }
+  </script>
+</body>
+</html>
